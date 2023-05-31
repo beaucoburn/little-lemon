@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-family: "Markazi Text";
+  font-size: 64px;
+}
+
+h2 {
+  font-family: "Markazi Text";
+  font-size: 40px;
+}
+
+p {
+  font-family: "Karla";
+  font-size: 18px;
+}
+
+li {
+  font-family: "Karla";
+  font-size: 18px;
+  text-decoration: none;
+  margin: 4px;
+}

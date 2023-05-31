@@ -1,4 +1,5 @@
 import logo from "../assets/Logo.svg"
+import "./Nav.css"
 
 const navLinks = [
     {
@@ -37,9 +38,9 @@ function Nav() {
     });
 
     return (
-        <nav>
+        <nav className="nav">
             <img src={logo} alt="Logo" />
-            <ul>
+            <ul className="nav">
                 {navList}
             </ul>
         </nav>

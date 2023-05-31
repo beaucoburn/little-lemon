@@ -1,0 +1,12 @@
+footer {
+  background-color: #495E57;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.navLink {
+  list-style-type: none;
+}

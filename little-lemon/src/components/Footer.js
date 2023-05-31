@@ -1,3 +1,4 @@
+import "./Footer.css"
 import restaurant from "../assets/restaurant.jpg"
 
 const doormat = [
@@ -78,28 +79,34 @@ function Footer() {
     });
 
     return (
-        <footer>
+        <footer className="footer">
             <img src={restaurant} alt="Restaurant" />
-            <h1>
-                Doormat <br />
-                Navigation
-            </h1>
-            <ul>
-                {doormatList}
-            </ul>
-            <h1>
-                Contact
-            </h1>
-            <ul>
-                {contactList}
-            </ul>
-            <h1>
-                Social Media <br />
-                Links
-            </h1>
-            <ul>
-                {socialMediaList}
-            </ul>
+            <div>
+                <h1>
+                    Doormat <br />
+                    Navigation
+                </h1>
+                <ul className="navLink">
+                    {doormatList}
+                </ul>
+            </div>
+            <div>
+                <h1>
+                    Contact
+                </h1>
+                <ul className="navLink">
+                    {contactList}
+                </ul>
+            </div>
+            <div>
+                <h1>
+                    Social Media <br />
+                    Links
+                </h1>
+                <ul className="navLink">
+                    {socialMediaList}
+                </ul>
+            </div>
         </footer>
     );
   }
