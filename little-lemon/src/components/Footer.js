@@ -1,4 +1,3 @@
-import "./Footer.css"
 import restaurant from "../assets/restaurant.jpg"
 
 const doormat = [

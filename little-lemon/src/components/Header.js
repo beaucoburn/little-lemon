@@ -1,4 +1,3 @@
-import "./Header.css"
 import restaurantFood from "../assets/restauranfood.jpg";
 
 function Header() {

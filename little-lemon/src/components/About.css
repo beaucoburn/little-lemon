@@ -1,9 +1,0 @@
-section {
-    display: flex;
-    flex-direction: row;
-    background-color: #EE9972;
-}
-
-img {
-    max-height: 500px;
-}

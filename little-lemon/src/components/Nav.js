@@ -1,5 +1,4 @@
 import logo from "../assets/Logo.svg"
-import "./Nav.css"
 
 const navLinks = [
     {

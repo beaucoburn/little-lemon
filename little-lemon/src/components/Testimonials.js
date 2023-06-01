@@ -1,4 +1,3 @@
-import "./Testimonials.css"
 import TestimonialCard from "./TestimonialCard";
 
 function Testimonials() {
