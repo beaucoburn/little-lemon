@@ -37,9 +37,9 @@ function Nav() {
     });
 
     return (
-        <nav className="nav">
+        <nav /*className="nav"*/>
             <img src={logo} alt="Logo" />
-            <ul className="nav">
+            <ul /*className="nav"*/>
                 {navList}
             </ul>
         </nav>

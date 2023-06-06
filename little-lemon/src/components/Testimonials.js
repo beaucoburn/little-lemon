@@ -12,6 +12,6 @@ function Testimonials() {
                 </div>
             </div>
     );
-  }
-  
-  export default Testimonials;
+}
+
+export default Testimonials;

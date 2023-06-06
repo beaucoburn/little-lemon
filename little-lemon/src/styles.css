@@ -1,25 +1,9 @@
-.app {
-    display: flex;
-    flex-direction: column;
+* {
+    padding: 0px;
+    margin: 0px;
 }
-
-.app li {
-    margin: 12px;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: auto;
-}
-
-.navLink {
-    list-style-type: none;
-  }
 
 body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -30,6 +14,119 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
+}
+
+.app {
+    display: grid;
+    grid-template-rows:
+            "nav"
+            "header"
+            "main"
+            "about"
+            "footer";
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: 96px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 580px;
+    height: 40px;
+    left: 570px;
+    padding-top: 40px;
+    margin-left: 80px;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav img {
+    width: 200px;
+    height: 56px;
+    left: 290px;
+    padding-top: 24px;
+}
+
+header {
+    background-color: #495E57;
+    display: grid;
+    grid-template-columns: "div div";
+    height: 336px;
+}
+
+header div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    font-family: 'Markazi Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    white-space: nowrap;
+    line-height: 50px;
+    color: #F4CE14;
+    margin-top: 45px;
+}
+
+header h2 {
+    font-family: 'Markazi Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 30px;
+    color: #EDEFEE;
+}
+
+header p {
+    width: 220px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #EDEFEE;
+    margin-top: 40px;
+}
+
+button {
+    width: 170px;
+    height: 40px;
+    background: #F4CE14;
+    border-radius: 16px;
+    margin-top: 5px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333333;
+    border: none;
+
+}
+
+header img {
+    border-radius: 16px;
+    width: 330px;
+    height: 384px;
+    margin-top: 16px;
+
+}
+
+main {
+    margin: 150px auto;
+}
+
+.specials {
+    color: #333333;
+    margin: auto;
 }
 
 h1 {
@@ -51,25 +148,10 @@ li {
     font-family: "Karla";
     font-size: 18px;
     text-decoration: none;
-    margin: 4px;
 }
 
 a {
     text-decoration: none;
-}
-
-header {
-    background-color: #495E57;
-    padding: 70px;
-}
-
-header h1 {
-    color: yellow;
-}
-
-header img {
-    border-radius: 16px;
-    max-height: 500px;
 }
 
 footer {
@@ -90,4 +172,8 @@ section {
 
 img {
     max-height: 500px;
+}
+
+.navLink {
+    list-style-type: none;
 }

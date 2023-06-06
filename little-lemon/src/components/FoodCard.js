@@ -1,9 +1,9 @@
-function FoodCard() {
+function FoodCard(props) {
     return (
-            <div>
-                Food Card
+            <div style={{ display: "flex" }}>
+                {props.card}
             </div>
     );
-  }
-  
-  export default FoodCard;
+}
+
+export default FoodCard;

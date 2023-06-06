@@ -1,9 +1,9 @@
 function TestimonialCard() {
     return (
-            <div>
+            <card>
                 Testimonial Card
-            </div>
+            </card>
     );
-  }
-  
-  export default TestimonialCard;
+}
+
+export default TestimonialCard;
