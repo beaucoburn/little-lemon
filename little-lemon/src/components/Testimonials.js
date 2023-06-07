@@ -6,9 +6,6 @@ function Testimonials() {
                 <h1>Testimonials</h1>
                 <div style={{display: "flex"}}>
                     <TestimonialCard />
-                    <TestimonialCard />
-                    <TestimonialCard />
-                    <TestimonialCard />
                 </div>
             </div>
     );

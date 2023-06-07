@@ -1,8 +1,8 @@
-function TestimonialCard() {
+function TestimonialCard(props) {
     return (
-            <card>
-                Testimonial Card
-            </card>
+            <div style={{ display: "flex", gap: "26px", }}>
+                {props.card}
+            </div>
     );
 }
 
