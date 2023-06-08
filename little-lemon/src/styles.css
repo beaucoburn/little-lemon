@@ -63,7 +63,7 @@ header {
 }
 
 header div {
-    margin-left: auto;
+    margin-left: 290px;
     margin-right: auto;
 }
 
@@ -121,12 +121,12 @@ header img {
 }
 
 main {
-    margin: 150px auto;
+    
 }
 
 .specials {
     color: #333333;
-    margin: auto;
+    margin: 150px 290px;
 }
 
 .specialsCard {

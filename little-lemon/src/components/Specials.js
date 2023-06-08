@@ -52,7 +52,7 @@ const cards = cardInfo.map((card) => {
 function Specials() {
   return (
     <div className="specials">
-      <div style={{ display: "flex", justifyContent: "space-between" ,marginBottom: "35px" }}>
+      <div style={{ display: "flex", justifyContent: "space-around" ,marginBottom: "35px" }}>
         <h1>This week's specials!</h1>
         <button>Online Menu</button>
       </div>
