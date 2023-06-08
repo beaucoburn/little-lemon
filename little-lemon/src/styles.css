@@ -190,6 +190,7 @@ section {
     display: flex;
     flex-direction: row;
     background-color: #EE9972;
+    padding: "120px 290px 80px 290px";
 }
 
 img {

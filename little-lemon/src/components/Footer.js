@@ -1,4 +1,4 @@
-import restaurant from "../assets/restaurant.jpg"
+import restaurant from "../assets/restaurant2.jpg"
 
 const doormat = [
     {
@@ -108,6 +108,6 @@ function Footer() {
             </div>
         </footer>
     );
-  }
-  
+}
+
 export default Footer;
