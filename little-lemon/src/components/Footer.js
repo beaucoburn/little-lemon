@@ -79,30 +79,57 @@ function Footer() {
 
     return (
         <footer className="footer">
-            <img src={restaurant} alt="Restaurant" />
+            <img src={restaurant} alt="Restaurant" style={{width: "155px", height: "264px"}} />
             <div>
-                <h1>
+                <h5>
                     Doormat <br />
                     Navigation
-                </h1>
-                <ul className="navLink">
+                </h5>
+                <ul
+                    className="navLink"
+                    style={{
+                        fontFamily: 'Karla',
+                        fontStyle: "normal",
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        lineHeight: "19px",
+                        color: "#EDEFEE",
+                        }} >
                     {doormatList}
                 </ul>
             </div>
             <div>
-                <h1>
+                <h5>
                     Contact
-                </h1>
-                <ul className="navLink">
+                </h5>
+                <ul
+                    className="navLink"
+                    style={{
+                        fontFamily: 'Karla',
+                        fontStyle: "normal",
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        lineHeight: "19px",
+                        color: "#EDEFEE",
+                        }} >
                     {contactList}
                 </ul>
             </div>
             <div>
-                <h1>
+                <h5>
                     Social Media <br />
                     Links
-                </h1>
-                <ul className="navLink">
+                </h5>
+                <ul
+                    className="navLink"
+                    style={{
+                        fontFamily: 'Karla',
+                        fontStyle: "normal",
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        lineHeight: "19px",
+                        color: "#EDEFEE",
+                        }} >
                     {socialMediaList}
                 </ul>
             </div>

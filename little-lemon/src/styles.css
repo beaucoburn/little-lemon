@@ -142,6 +142,25 @@ main {
     border-radius: 16px 16px 0 0;
 }
 
+footer {
+    background-color: #495E57;
+    display: flex;
+    flex-direction: row;
+    padding: 80px 290px;
+}
+
+footer h1 {
+    color: yellow;
+}
+
+footer .navLink {
+    list-style-type: none;
+}
+
+footer div {
+    margin: 20px 70px;
+}
+
 h1 {
     font-family: "Markazi Text";
     font-size: 64px;
@@ -150,6 +169,16 @@ h1 {
 h2 {
     font-family: "Markazi Text";
     font-size: 40px;
+}
+
+h5 {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #F4CE14;
 }
 
 h4 {
@@ -176,27 +205,9 @@ a {
     text-decoration: none;
 }
 
-footer {
-    background-color: #495E57;
-    display: flex;
-    flex-direction: row;
-}
-
-footer h1 {
-    color: yellow;
-}
-
 section {
     display: flex;
     flex-direction: row;
     background-color: #EE9972;
     padding: "120px 290px 80px 290px";
-}
-
-img {
-    max-height: 500px;
-}
-
-.navLink {
-    list-style-type: none;
 }
