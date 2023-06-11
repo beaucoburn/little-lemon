@@ -94,6 +94,7 @@ function Footer() {
                         fontSize: "16px",
                         lineHeight: "19px",
                         color: "#EDEFEE",
+                        marginTop: "15px",
                         }} >
                     {doormatList}
                 </ul>
@@ -111,12 +112,13 @@ function Footer() {
                         fontSize: "16px",
                         lineHeight: "19px",
                         color: "#EDEFEE",
+                        marginTop: "40px",
                         }} >
                     {contactList}
                 </ul>
             </div>
             <div>
-                <h5>
+                <h5 style={{ width: "180px"}}>
                     Social Media <br />
                     Links
                 </h5>
@@ -129,6 +131,7 @@ function Footer() {
                         fontSize: "16px",
                         lineHeight: "19px",
                         color: "#EDEFEE",
+                        marginTop: "15px",
                         }} >
                     {socialMediaList}
                 </ul>

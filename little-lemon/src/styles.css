@@ -55,6 +55,10 @@ nav img {
     padding-top: 24px;
 }
 
+nav a:visited {
+    color: #333333;
+}
+
 header {
     background-color: #495E57;
     display: grid;
@@ -161,6 +165,10 @@ footer div {
     margin: 20px 70px;
 }
 
+footer a:visited {
+    color: #EDEFEE;
+}
+
 h1 {
     font-family: "Markazi Text";
     font-size: 64px;
@@ -210,4 +218,45 @@ section {
     flex-direction: row;
     background-color: #EE9972;
     padding: "120px 290px 80px 290px";
+}
+
+label {
+    font-family: "Markazi Text";
+    font-style: "normal";
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #FFFFFF;
+    margin-top: 100px;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    font-family: "Karla";
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 24px;
+    color: #333333;
+    content: "-\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #333333;
+    text-decoration: none;
 }
