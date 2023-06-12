@@ -124,10 +124,6 @@ header img {
 
 }
 
-main {
-    
-}
-
 .specials {
     color: #333333;
     margin: 150px 290px;
@@ -228,7 +224,7 @@ label {
 }
 
 /* Style the list */
-ul.breadcrumb {
+.breadcrumb {
     padding: 10px 16px;
     list-style: none;
     background-color: #FFFFFF;
@@ -236,27 +232,27 @@ ul.breadcrumb {
 }
 
 /* Display list items side by side */
-ul.breadcrumb li {
+.breadcrumb li {
     display: inline;
     font-size: 18px;
     font-family: "Karla";
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
+.breadcrumb li+li:before {
     padding: 24px;
     color: #333333;
     content: "-\00a0";
 }
 
 /* Add a color to all links inside the list */
-ul.breadcrumb li a {
+.breadcrumb li a {
     color: #333333;
     text-decoration: none;
 }
 
 /* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
+.breadcrumb li a:hover {
     color: #333333;
     text-decoration: none;
 }

@@ -1,4 +1,5 @@
-import logo from "../assets/Logo.svg"
+import logo from "../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 const navLinks = [
     {
@@ -15,7 +16,7 @@ const navLinks = [
     },
     {
         text: "Reservations",
-        url: "/",
+        url: "/reservation",
     },
     {
         text: "Order Online",
@@ -32,14 +33,14 @@ function Nav() {
 
     const navList = navLinks.map((navLinks) => {
         return (
-            <li><a href={navLinks.url} alt="">{navLinks.text}</a></li>
+            <li><Link to={navLinks.url} className="nav-item" alt="">{navLinks.text}</Link></li>
         );
     });
 
     return (
-        <nav /*className="nav"*/>
-            <img src={logo} alt="Logo" />
-            <ul /*className="nav"*/>
+        <nav>
+            <Link to="/" className="nav-item"><img src={logo} alt="Logo" /></Link>
+            <ul>
                 {navList}
             </ul>
         </nav>
