@@ -1,5 +1,4 @@
 import Confirmation from "./Confirmation.js";
-import Occasion from "./Occassion.js";
 import Reservation from "./Reservation.js";
 import Homepage from "./Homepage.js"
 import {Routes, Route} from 'react-router-dom';
@@ -10,7 +9,6 @@ function Main() {
                 <Routes>
                     <Route path="/" element={<Homepage />}></Route>
                     <Route path="/reservation" element={<Reservation />}></Route>
-                    <Route path="/occasion" element={<Occasion />}></Route>
                     <Route path="/confirmation" element={<Confirmation />}></Route>
                 </Routes>
         </main>

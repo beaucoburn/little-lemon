@@ -22,10 +22,6 @@ const navLinks = [
         text: "Order Online",
         url: "/",
     },
-    {
-        text: "Login",
-        url: "/",
-    },
 ]
 
 

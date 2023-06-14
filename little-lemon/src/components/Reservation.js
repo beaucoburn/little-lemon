@@ -1,6 +1,6 @@
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import DateTimePicker from "./DateTimePicker";
-import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
+//import Form from "react-bootstrap/Form";
 
 function Reservation() {
     return (
@@ -8,8 +8,7 @@ function Reservation() {
                 <Breadcrumb className="breadcrumb">
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                     <Breadcrumb.Item active style={{fontWeight: "bold"}} >Guest Details</Breadcrumb.Item>
-                    <Breadcrumb.Item href="#">Special Requests</Breadcrumb.Item>
-                    <Breadcrumb.Item href="#">Confirmation</Breadcrumb.Item>
+                    <Breadcrumb.Item href="/confirmation">Confirmation</Breadcrumb.Item>
                 </Breadcrumb>
                 <h1 style={{ color: "#333333", marginTop: "40px" }}>Reserve a Table Now:</h1>
                 <h2 style={{ color: "#333333"}}>Please fill in the information below to reserve a table at the Little Lemon Restaurant.</h2>
@@ -23,7 +22,8 @@ function Reservation() {
                             placeholder="Please tell us your name here"
                             required
                             style={{
-                                width: "1000px",
+                                display: "flex",
+                                width: "1100px",
                                 height: "40px",
                                 background: "#EDEFEE",
                                 borderRadius: "16px",
@@ -39,7 +39,8 @@ function Reservation() {
                             placeholder="Email - eg. name@example.com"
                             required
                             style={{
-                                width: "1000px",
+                                display: "flex",
+                                width: "1100px",
                                 height: "40px",
                                 background: "#EDEFEE",
                                 borderRadius: "16px",
@@ -55,83 +56,87 @@ function Reservation() {
                             placeholder="Please let us know your phone number here"
                             required
                             style={{
-                                width: "1000px",
+                                display: "flex",
+                                width: "1100px",
                                 height: "40px",
                                 background: "#EDEFEE",
                                 borderRadius: "16px",
                                 borderColor: "#333333"
                                 }}/>
                     </div>
-                    <div>
-                        <div style={{display: "flex", flexDirection: "column"}}>
-                            <label for="people" style={{display: "flex", marginTop: "45px"}}>Number of People:</label>
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+                        <div>
+                        <label for="guests" style={{display: "flex", marginTop: "45px"}}>Number of guests:</label>
+                        <input
+                            type="number"
+                            placeholder="1"
+                            min="1"
+                            max="10"
+                            id="guests"
+                            required
+                            style={{
+                                display: "flex",
+                                width: "400px",
+                                height: "40px",
+                                background: "#EDEFEE",
+                                borderRadius: "16px",
+                                borderColor: "#333333"
+                            }}
+                            />
+                            <label for="occasion" style={{display: "flex", marginTop: "45px"}}>Occasion:</label>
                             <select
-                                type="select"
-                                name="people"
-                                id="people"
-                                required
+                                id="occasion"
                                 style={{
+                                    display: "flex",
                                     width: "400px",
                                     height: "40px",
                                     background: "#EDEFEE",
                                     borderRadius: "16px",
-                                    borderColor: "#333333",
-                                    justifyContent: "flex-start"
-                                    }}>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
+                                    borderColor: "#333333"
+                                }}>
+                                <option>None</option>
+                                <option>Birthday</option>
+                                <option>Anniversary</option>
+                            </select>
                         </div>
                         <div>
-                            <label for="datetime" style={{display: "flex", marginTop: "45px"}}>Select a Date and Time</label>
-                            <DateTimePicker />
-                        </div>
-                        <div style={{display: "flex", flexDirection: "column"}}>
-                            <label for="location" style={{display: "flex", marginTop: "45px"}}>Seating Location:</label>
-                            <div style={{display: "flex", flexDirection: "row"}}>
-                                <input
-                                    type={"radio"}
-                                    name={"location"}
-                                    id={"inside"}
-                                    value={"inside"}
-                                    checked
-                                    style={{
-                                        fontFamily: "Markazi",
-                                        fontSize: "15px",
-                                        margin: "5px",
-                                    }}
-                                    />
-                                <label for="inside" style={{display: "flex"}}>Inside</label>
-                            </div>
-                            <div style={{display: "flex", flexDirection: "row"}}>
-                                <input
-                                    type={"radio"}
-                                    name={"location"}
-                                    id={"outside"}
-                                    value={"outside"}
-                                    style={{
-                                        fontFamily: "Markazi",
-                                        fontSize: "15px",
-                                        margin: "5px",
-                                    }}
-                                    />
-                                <label for="outside" style={{display: "flex"}}>Outside</label>
-                            </div>
-                        </div>
+                        <label for="res-date" style={{display: "flex", marginTop: "45px"}}>Choose date:</label>
+                        <input
+                            type="date"
+                            id="res-date"
+                            required
+                            style={{
+                                display: "flex",
+                                width: "400px",
+                                height: "40px",
+                                background: "#EDEFEE",
+                                borderRadius: "16px",
+                                borderColor: "#333333"
+                            }}/>
+                        <label for="res-time" style={{display: "flex", marginTop: "45px"}}>Choose time:</label>
+                        <select
+                            id="res-time"
+                            required
+                            style={{
+                                display: "flex",
+                                width: "400px",
+                                height: "40px",
+                                background: "#EDEFEE",
+                                borderRadius: "16px",
+                                borderColor: "#333333"
+                            }}>
+                            <option>17:00</option>
+                            <option>18:00</option>
+                            <option>19:00</option>
+                            <option>20:00</option>
+                            <option>21:00</option>
+                            <option>22:00</option>
+                        </select>
+                        <Link to="/confirmation" className="nav-item" ><button type="submit" value="Make Your reservation">Make Your Reservation</button></Link>
                     </div>
-                    <div>
-                        <button>Next</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </form>
+        </div>
     );
 }
 

@@ -1,4 +1,5 @@
-import restaurant from "../assets/restaurant2.jpg"
+import restaurant from "../assets/restaurant2.jpg";
+import { Link } from "react-router-dom";
 
 const doormat = [
     {
@@ -15,7 +16,7 @@ const doormat = [
     },
     {
         text: "Reservations",
-        url: "/",
+        url: "/reservation",
     },
     {
         text: "Order Online",
@@ -61,19 +62,19 @@ function Footer() {
 
     const doormatList = doormat.map((doormat) => {
         return (
-            <li><a href={doormat.url} alt="">{doormat.text}</a></li>
+            <li><Link to={doormat.url} className="nav-item" alt="">{doormat.text}</Link></li>
         );
     });
 
     const contactList = contact.map((contact) => {
         return (
-            <li><a href={contact.url} alt="">{contact.text}</a></li>
+            <li><Link to={contact.url} className="nav-item" alt="">{contact.text}</Link></li>
         );
     });
 
     const socialMediaList = socialMedia.map((socialMedia) => {
         return (
-            <li><a href={socialMedia.url} alt="">{socialMedia.text}</a></li>
+            <li><Link to={socialMedia.url} className="nav-item" alt="">{socialMedia.text}</Link></li>
         );
     });
 
@@ -113,6 +114,8 @@ function Footer() {
                         lineHeight: "19px",
                         color: "#EDEFEE",
                         marginTop: "40px",
+                        wordBreak: "break-all",
+                        inlineSize: "150px",
                         }} >
                     {contactList}
                 </ul>

@@ -61,14 +61,13 @@ nav a:visited {
 
 header {
     background-color: #495E57;
-    display: grid;
-    grid-template-columns: "div div";
     height: 336px;
+    padding-left: 290px;
+    padding-right: 290px;
 }
 
 header div {
-    margin-left: 290px;
-    margin-right: auto;
+    margin: auto;
 }
 
 header h1 {
@@ -121,12 +120,12 @@ header img {
     width: 330px;
     height: 384px;
     margin-top: 16px;
-
+    margin-left: 100px;
 }
 
 .specials {
     color: #333333;
-    margin: 150px 290px;
+    margin: 150px 310px;
 }
 
 .specialsCard {
@@ -228,7 +227,8 @@ label {
     padding: 10px 16px;
     list-style: none;
     background-color: #FFFFFF;
-    margin-top: 100px;
+    margin: auto;
+    margin-top: 60px;
 }
 
 /* Display list items side by side */

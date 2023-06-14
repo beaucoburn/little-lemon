@@ -3,7 +3,7 @@ import Testimonials from "./Testimonials";
 
 function Confirmation() {
     return (
-            <div style={{ textAlign: "center", margin: "0px 290px 350px 290px"}}>
+            <div>
                 <Specials />
                 <Testimonials />
             </div>
