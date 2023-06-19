@@ -1,31 +1,26 @@
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { Link } from "react-router-dom";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {fetchAPI, submitAPI} from "./api.js";
 
-function Reservation() {
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [guests, setGuests] = useState("");
-    const [occasion, setOccasion] = useState("");
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("");
+function Reservation(props) {
 
+    const {dispatch, state, submitForm} = props;
+    const [times, setTimes] = useState([]);
     const clearForm = () => {
-        setName("");
-        setEmail("");
-        setPhone("");
-        setGuests("");
-        setOccasion("");
-        setDate("");
-        setTime("");
+        dispatch({type: 'clear', payload: ''});
     };
 
+    //function for submitting form and redirecting to confirmation page
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Reservation created!");
+        submitAPI(state);
+        submitForm();
+        console.log(state);
+        //alert("Reservation created!");
         clearForm();
       };
+
+   useEffect(() => {state.date && setTimes(fetchAPI(state.date))}, [JSON.stringify(state.date)]);
 
     return (
             <div style={{ textAlign: "center", margin: "0px 290px"}}>
@@ -40,9 +35,9 @@ function Reservation() {
                     <div>
                         <label for="name" style={{display: "flex", marginTop: "60px"}}>Name: </label>
                         <input
-                            value={name}
+                            value={state.name}
                             onChange={(e) => {
-                                setName(e.target.value);
+                                dispatch({ type: 'name', payload: e.target.value });
                             }}
                             type="text"
                             name="name"
@@ -61,9 +56,9 @@ function Reservation() {
                     <div>
                         <label for="email" style={{display: "flex", marginTop: "45px"}}>Email: </label>
                         <input
-                            value={email}
+                            value={state.email}
                             onChange={(e) => {
-                                setEmail(e.target.value);
+                                dispatch({ type: 'email', payload: e.target.value });
                             }}
                             type="text"
                             name="email"
@@ -82,9 +77,9 @@ function Reservation() {
                     <div>
                         <label for="phone" style={{display: "flex", marginTop: "45px"}}>Phone: </label>
                         <input
-                            value={phone}
+                            value={state.phone}
                             onChange={(e) => {
-                                setPhone(e.target.value);
+                                dispatch({ type: 'phone', payload: e.target.value });
                             }}
                             type="phone"
                             name="phone"
@@ -104,9 +99,9 @@ function Reservation() {
                         <div>
                         <label for="guests" style={{display: "flex", marginTop: "45px"}}>Number of guests:</label>
                         <input
-                            value={guests}
+                            value={state.guests}
                             onChange={(e) => {
-                                setGuests(e.target.value);
+                                dispatch({ type: 'guests', payload: e.target.value });
                             }}
                             type="number"
                             placeholder="1"
@@ -125,9 +120,9 @@ function Reservation() {
                             />
                             <label for="occasion" style={{display: "flex", marginTop: "45px"}}>Occasion:</label>
                             <select
-                                value={occasion}
+                                value={state.occasion}
                                 onChange={(e) => {
-                                    setOccasion(e.target.value);
+                                    dispatch({ type: 'occasion', payload: e.target.value });
                                 }}
                                 id="occasion"
                                 style={{
@@ -146,9 +141,9 @@ function Reservation() {
                         <div>
                         <label for="res-date" style={{display: "flex", marginTop: "45px"}}>Choose date:</label>
                         <input
-                            value={date}
+                            value={state.date}
                             onChange={(e) => {
-                                setDate(e.target.value);
+                                dispatch({ type: 'date', payload: e.target.value });
                             }}
                             type="date"
                             id="res-date"
@@ -163,9 +158,9 @@ function Reservation() {
                             }}/>
                         <label for="res-time" style={{display: "flex", marginTop: "45px"}}>Choose time:</label>
                         <select
-                            value={time}
+                            value={state.time}
                             onChange={(e) => {
-                                setTime(e.target.value);
+                                dispatch({ type: 'time', payload: e.target.value });
                             }}
                             id="res-time"
                             required
@@ -177,14 +172,19 @@ function Reservation() {
                                 borderRadius: "16px",
                                 borderColor: "#333333"
                             }}>
-                            <option>17:00</option>
-                            <option>18:00</option>
-                            <option>19:00</option>
-                            <option>20:00</option>
-                            <option>21:00</option>
-                            <option>22:00</option>
+                            {times.map((time) => (<option value={time}>{time}</option>))}
                         </select>
-                        {/*<Link to="/confirmation" className="nav-item" >*/}<button type="submit" value="Make Your reservation">Make Your Reservation</button>{/*</Link>*/}
+                        <button
+                            type="submit"
+                            value="Make Your reservation"
+                            style={{
+                                marginTop: "45px",
+                                marginBottom: "45px",
+                                justifyItems: "end",
+                                height: "50px"
+                                }}>
+                                    Make Your Reservation
+                                    </button>
                     </div>
                 </div>
             </form>
