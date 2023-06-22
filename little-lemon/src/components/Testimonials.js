@@ -10,27 +10,31 @@ const testimonialInfo = [
       id: "WomanOne",
       img: WomanOne,
       title: "Woman One",
+      key: "woman1",
     },
     {
       id: "ManOne",
       img: ManOne,
       title: "Man One",
+      key: "man1",
     },
     {
       id: "WomanTwo",
       img: WomanTwo,
       title: "Woman Two",
+      key: "woman2",
     },
     {
       id: "ManTwo",
       img: ManTwo,
       title: "Man Two",
+      key: "man2",
     },
   ];
 
 const testimonialCards = testimonialInfo.map((testimonialCard) => {
     return (
-        <div style={{ background: "#EDEFEE", borderRadius: "16px", width: "200px", height: "200px", padding: "25px 0px 0px 20px" }}>
+        <div key={testimonialCard.key} style={{ background: "#EDEFEE", borderRadius: "16px", width: "200px", height: "200px", padding: "25px 0px 0px 20px" }}>
             <div style={{ display: "flex", marginBottom: "10px" }}>
                 <h3>Rating</h3>
                 <img src={Star} alt="rating" style={{ height: "18px", marginLeft: "7px" }}/>

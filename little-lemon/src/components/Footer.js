@@ -5,26 +5,32 @@ const doormat = [
     {
         text: "Home",
         url: "/",
+        key: "home",
     },
     {
         text: "About",
         url: "/",
+        key: "about",
     },
     {
         text: "Menu",
         url: "/",
+        key: "menu",
     },
     {
         text: "Reservations",
         url: "/reservation",
+        key: "reservations",
     },
     {
         text: "Order Online",
         url: "/",
+        key: "order",
     },
     {
         text: "Login",
         url: "/",
+        key: "login",
     },
 ]
 
@@ -32,14 +38,17 @@ const contact = [
     {
         text: "Address",
         url: "/",
+        key: "address1",
     },
     {
         text: "Phone Number",
         url: "/",
+        key: "phone1",
     },
     {
         text: "Email",
         url: "/",
+        key: "email1",
     },
 ]
 
@@ -47,14 +56,17 @@ const socialMedia = [
     {
         text: "Address",
         url: "/",
+        key: "address2",
     },
     {
         text: "Phone Number",
         url: "/",
+        key: "phone2",
     },
     {
         text: "Email",
         url: "/",
+        key: "email2",
     },
 ]
 
@@ -62,19 +74,19 @@ function Footer() {
 
     const doormatList = doormat.map((doormat) => {
         return (
-            <li><Link to={doormat.url} className="nav-item" alt="">{doormat.text}</Link></li>
+            <li key={doormat.key}><Link to={doormat.url} className="nav-item" alt="">{doormat.text}</Link></li>
         );
     });
 
     const contactList = contact.map((contact) => {
         return (
-            <li><Link to={contact.url} className="nav-item" alt="">{contact.text}</Link></li>
+            <li key={contact.key}><Link to={contact.url} className="nav-item" alt="">{contact.text}</Link></li>
         );
     });
 
     const socialMediaList = socialMedia.map((socialMedia) => {
         return (
-            <li><Link to={socialMedia.url} className="nav-item" alt="">{socialMedia.text}</Link></li>
+            <li key={socialMedia.key}><Link to={socialMedia.url} className="nav-item" alt="">{socialMedia.text}</Link></li>
         );
     });
 

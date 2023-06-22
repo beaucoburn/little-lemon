@@ -5,22 +5,27 @@ const navLinks = [
     {
         text: "Home",
         url: "/",
+        key: "home3",
     },
     {
         text: "About",
-        url: "/",
+        url: "/about",
+        key: "about3",
     },
     {
         text: "Menu",
-        url: "/",
+        url: "/menu",
+        key: "menu3",
     },
     {
         text: "Reservations",
         url: "/reservation",
+        key: "reservations3",
     },
     {
         text: "Order Online",
-        url: "/",
+        url: "/order",
+        key: "order3",
     },
 ]
 
@@ -29,7 +34,7 @@ function Nav() {
 
     const navList = navLinks.map((navLinks) => {
         return (
-            <li><Link to={navLinks.url} className="nav-item" alt="">{navLinks.text}</Link></li>
+            <li key={navLinks.url}><Link to={navLinks.url} className="nav-item" alt="">{navLinks.text}</Link></li>
         );
     });
 

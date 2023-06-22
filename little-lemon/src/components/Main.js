@@ -1,9 +1,8 @@
 import Confirmation from "./Confirmation.js";
 import Reservation from "./Reservation.js";
 import Homepage from "./Homepage.js"
-import {Routes, Route, redirect} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import {useReducer} from "react";
-import { submitAPI } from "./api.js";
 
 //Turn state for date and time into a reducer and pass as a prop to Reservation.js
 const reducer = (state, action) => {
@@ -29,15 +28,6 @@ const reducer = (state, action) => {
     }
 }
 
-//function for submitting form and redirecting to confirmation page
-const submitForm = (state) => {
-
-    if (submitAPI(state) === true) {
-        redirect("/confirmation");
-        console.log("Form submitted!");
-    }
-}
-
 function Main() {
 
     const initialState = {}
@@ -47,7 +37,7 @@ function Main() {
         <main>
                 <Routes>
                     <Route path="/" element={<Homepage />}></Route>
-                    <Route path="/reservation" element={<Reservation submitForm={submitForm} state={state} dispatch={dispatch}/>}></Route>
+                    <Route path="/reservation" element={<Reservation state={state} dispatch={dispatch}/>}></Route>
                     <Route path="/confirmation" element={<Confirmation />}></Route>
                 </Routes>
         </main>
