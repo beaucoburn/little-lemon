@@ -1,5 +1,5 @@
 # little-lemon
-Little Lemon site for Capstone Class
+Reservation system for a restaurant Little Lemon
 
 # Getting Started with Create React App
 
