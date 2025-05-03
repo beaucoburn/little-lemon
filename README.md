@@ -1,3 +1,5 @@
+![Screenshot From 2025-05-03 12-38-24](https://github.com/user-attachments/assets/d79cc13f-1f40-420e-a1d4-955bbfe94c13)
+
 # little-lemon
 Reservation system for a restaurant Little Lemon
 
